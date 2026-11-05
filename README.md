@@ -58,8 +58,10 @@ steps or create new copies from the source data.
 
 ### Create the consensus-synergy outcomes
 
-The file `summary_df_ALMANAC.csv` contains the NCI-ALMANAC combination records
-used to define the observed synergy outcome. Place it at
+Download [`summary_df_ALMANAC.csv`](https://zenodo.org/api/records/23986100/files/summary_df_ALMANAC.csv/content)
+from the [project dataset](https://doi.org/10.5281/zenodo.23986099). The file
+contains the NCI-ALMANAC combination records used to define the observed
+synergy outcome. Place it at
 `data/raw/drugcomb/summary_df_ALMANAC.csv`, then run:
 
 ```bash
@@ -205,6 +207,9 @@ files are included. Creating every input from its source requires separate
 downloads and some manual identifier review. Source links and versions are in
 `docs/RAW_DATA_DOWNLOADS.md`; `data/README.md` maps each input file to its
 source.
+
+The source ALMANAC table used by this project is archived on Zenodo:
+[doi:10.5281/zenodo.23986099](https://doi.org/10.5281/zenodo.23986099).
 
 ## Use restrictions
 

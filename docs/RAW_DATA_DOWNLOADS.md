@@ -18,7 +18,7 @@ have redistribution terms set by their providers.
 
 | Source | Release or file used | Official access |
 |---|---|---|
-| DrugComb / NCI-ALMANAC | `summary_df_ALMANAC.csv`, the project copy of the ALMANAC summary subset | [DrugComb v1.4 record](https://zenodo.org/records/11102665) and [direct public summary-table download](https://zenodo.org/records/11102665/files/summary_table_v1.4.csv?download=1) |
+| DrugComb / NCI-ALMANAC | `summary_df_ALMANAC.csv`, the project copy of the ALMANAC summary subset | [Project dataset](https://doi.org/10.5281/zenodo.23986099), [direct CSV download](https://zenodo.org/api/records/23986100/files/summary_df_ALMANAC.csv/content), and [original DrugComb v1.4 record](https://zenodo.org/records/11102665) |
 | CellMiner / NCI-60 | Compound activity data, including `AVGDATA` where available | [DTP NCI-60 raw compound-activity download](https://discover.nci.nih.gov/cellminer/download/rawdataset/DTP_NCI60_RAW.zip) and [CellMiner dataset index](https://discover.nci.nih.gov/cellminer/loadDownload.do) |
 | GEO | `GSE116450_series_matrix.txt.gz` | [Direct series-matrix download](https://ftp.ncbi.nlm.nih.gov/geo/series/GSE116nnn/GSE116450/matrix/GSE116450_series_matrix.txt.gz) and [GSE116450 record](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116450) |
 | Ensembl | Release 115 Affymetrix HG-U133 Plus 2 to HGNC mapping | [Ensembl 115 BioMart service](https://sep2025.archive.ensembl.org/biomart/martservice) |
@@ -32,10 +32,11 @@ have redistribution terms set by their providers.
 
 ### 1. DrugComb outcomes
 
-The analysis started from `summary_df_ALMANAC.csv`. It contains the
-NCI-ALMANAC records selected from DrugComb, including Bliss, Loewe, ZIP, and
-HSA scores. The file is about 291 MB, so it belongs in the accompanying Zenodo
-data deposit rather than in GitHub. After downloading it, save it as
+The analysis started from [`summary_df_ALMANAC.csv`](https://zenodo.org/api/records/23986100/files/summary_df_ALMANAC.csv/content).
+It contains the NCI-ALMANAC records selected from DrugComb, including Bliss,
+Loewe, ZIP, and HSA scores. The file is about 291 MB and is archived in the
+[project's Zenodo dataset](https://doi.org/10.5281/zenodo.23986099) rather than
+in GitHub. After downloading it, save it as
 `data/raw/drugcomb/summary_df_ALMANAC.csv`.
 
 Run `python scripts/00_build_consensus_outcomes.py` to create one observed
