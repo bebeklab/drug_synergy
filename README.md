@@ -204,8 +204,7 @@ ChEMBL, BindingDB, the NCI Drug Dictionary, and PubChem. The processed analysis
 files are included. Creating every input from its source requires separate
 downloads and some manual identifier review. Source links and versions are in
 `docs/RAW_DATA_DOWNLOADS.md`; `data/README.md` maps each input file to its
-source. `docs/ZENODO_DEPOSIT.md` lists the files and metadata for the data and
-software deposits.
+source.
 
 ## Use restrictions
 
