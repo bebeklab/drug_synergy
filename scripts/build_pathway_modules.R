@@ -34,7 +34,7 @@ project <- normalizePath(file.path(dirname(script_path), ".."), mustWork = TRUE)
 
 almanac_path <- argument(
   "almanac",
-  file.path(project, "data/raw/drugcomb/summary_table_v1.4.csv")
+  file.path(project, "data/raw/drugcomb/summary_df_ALMANAC.csv")
 )
 expression_path <- argument(
   "expression",

@@ -13,9 +13,6 @@ ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "data" / "raw"
 
 FILES = {
-    RAW / "drugcomb" / "summary_table_v1.4.csv": (
-        "https://zenodo.org/records/11102665/files/summary_table_v1.4.csv?download=1"
-    ),
     RAW / "geo" / "GSE116450_series_matrix.txt.gz": (
         "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE116nnn/GSE116450/"
         "matrix/GSE116450_series_matrix.txt.gz"
@@ -71,6 +68,8 @@ def main() -> None:
         RAW / "ensembl" / "ensembl115_affy_hgnc.tsv", args.force
     )
     print(
+        "The pathway build also uses data/raw/drugcomb/summary_df_ALMANAC.csv. "
+        "Download it from the project Zenodo record if it is not already present. "
         "MSigDB requires login. Download "
         "c2.cp.kegg.v2023.1.Hs.symbols.gmt manually into data/raw/msigdb/."
     )
