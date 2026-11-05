@@ -16,17 +16,17 @@ have redistribution terms set by their providers.
 
 ## Source checklist
 
-| Source | Release or file used | Official access | Suggested local location |
-|---|---|---|---|
-| DrugComb / NCI-ALMANAC | `summary_df_ALMANAC.csv`, the project copy of the ALMANAC summary subset | [DrugComb v1.4 record](https://zenodo.org/records/11102665) and [direct public summary-table download](https://zenodo.org/records/11102665/files/summary_table_v1.4.csv?download=1) | `data/raw/drugcomb/summary_df_ALMANAC.csv` |
-| CellMiner / NCI-60 | Compound activity data, including `AVGDATA` where available | [DTP NCI-60 raw compound-activity download](https://discover.nci.nih.gov/cellminer/download/rawdataset/DTP_NCI60_RAW.zip) and [CellMiner dataset index](https://discover.nci.nih.gov/cellminer/loadDownload.do) | `data/raw/cellminer/` |
-| GEO | `GSE116450_series_matrix.txt.gz` | [Direct series-matrix download](https://ftp.ncbi.nlm.nih.gov/geo/series/GSE116nnn/GSE116450/matrix/GSE116450_series_matrix.txt.gz) and [GSE116450 record](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116450) | `data/raw/geo/GSE116450_series_matrix.txt.gz` |
-| Ensembl | Release 115 Affymetrix HG-U133 Plus 2 to HGNC mapping | [Ensembl 115 BioMart service](https://sep2025.archive.ensembl.org/biomart/martservice) | `data/raw/ensembl/ensembl115_affy_hgnc.tsv` |
-| MSigDB | `c2.cp.kegg.v2023.1.Hs.symbols.gmt` | [Exact MSigDB 2023.1.Hs file (login required)](https://www.gsea-msigdb.org/gsea/msigdb/download_file.jsp?filePath=/msigdb/release/2023.1.Hs/c2.cp.kegg.v2023.1.Hs.symbols.gmt) | `data/raw/msigdb/c2.cp.kegg.v2023.1.Hs.symbols.gmt` |
-| ChEMBL | ChEMBL 35 SQLite release | [Direct ChEMBL 35 SQLite archive](https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_35/chembl_35_sqlite.tar.gz) and [release directory](https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_35/) | `data/raw/chembl/chembl_35_sqlite/chembl_35.db` |
-| BindingDB | May 2026 all-data TSV, `BindingDB_All_202605_tsv.zip` | The exact monthly file is no longer on the live download page; use the included harmonized table for this analysis. See [BindingDB downloads](https://www.bindingdb.org/rwd/bind/chemsearch/marvin/Download.jsp) and the [UCSD quarterly archive](https://library.ucsd.edu/dc/collection/bb03870458). | `data/raw/bindingdb/BindingDB_All_202605_tsv.zip` if already retained locally |
-| NCI Drug Dictionary | Individual drug records used to review incomplete mechanism annotations | [NCI Drug Dictionary](https://www.cancer.gov/publications/dictionaries/cancer-drug) | No bulk file required |
-| PubChem | Individual compound records used to review names, structures, and mechanisms | [PubChem](https://pubchem.ncbi.nlm.nih.gov/) | No bulk file required |
+| Source | Release or file used | Official access |
+|---|---|---|
+| DrugComb / NCI-ALMANAC | `summary_df_ALMANAC.csv`, the project copy of the ALMANAC summary subset | [DrugComb v1.4 record](https://zenodo.org/records/11102665) and [direct public summary-table download](https://zenodo.org/records/11102665/files/summary_table_v1.4.csv?download=1) |
+| CellMiner / NCI-60 | Compound activity data, including `AVGDATA` where available | [DTP NCI-60 raw compound-activity download](https://discover.nci.nih.gov/cellminer/download/rawdataset/DTP_NCI60_RAW.zip) and [CellMiner dataset index](https://discover.nci.nih.gov/cellminer/loadDownload.do) |
+| GEO | `GSE116450_series_matrix.txt.gz` | [Direct series-matrix download](https://ftp.ncbi.nlm.nih.gov/geo/series/GSE116nnn/GSE116450/matrix/GSE116450_series_matrix.txt.gz) and [GSE116450 record](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116450) |
+| Ensembl | Release 115 Affymetrix HG-U133 Plus 2 to HGNC mapping | [Ensembl 115 BioMart service](https://sep2025.archive.ensembl.org/biomart/martservice) |
+| MSigDB | `c2.cp.kegg.v2023.1.Hs.symbols.gmt` | [Exact MSigDB 2023.1.Hs file (login required)](https://www.gsea-msigdb.org/gsea/msigdb/download_file.jsp?filePath=/msigdb/release/2023.1.Hs/c2.cp.kegg.v2023.1.Hs.symbols.gmt) |
+| ChEMBL | ChEMBL 35 SQLite release | [Direct ChEMBL 35 SQLite archive](https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_35/chembl_35_sqlite.tar.gz) and [release directory](https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_35/) |
+| BindingDB | May 2026 all-data TSV, `BindingDB_All_202605_tsv.zip` | The exact monthly file is no longer on the live download page; use the included harmonized table for this analysis. See [BindingDB downloads](https://www.bindingdb.org/rwd/bind/chemsearch/marvin/Download.jsp) and the [UCSD quarterly archive](https://library.ucsd.edu/dc/collection/bb03870458). |
+| NCI Drug Dictionary | Individual drug records used to review incomplete mechanism annotations | [NCI Drug Dictionary](https://www.cancer.gov/publications/dictionaries/cancer-drug) |
+| PubChem | Individual compound records used to review names, structures, and mechanisms | [PubChem](https://pubchem.ncbi.nlm.nih.gov/) |
 
 ## Download steps
 
