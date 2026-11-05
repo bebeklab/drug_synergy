@@ -18,14 +18,14 @@ have redistribution terms set by their providers.
 
 | Source | Release or file used | Official access | Suggested local location |
 |---|---|---|---|
-| DrugComb / NCI-ALMANAC | `summary_df_ALMANAC.csv`, the project copy of the ALMANAC summary subset | [DrugComb v1.4 archive](https://zenodo.org/records/11102665) for the broader public release | `data/raw/drugcomb/summary_df_ALMANAC.csv` |
-| CellMiner / NCI-60 | Compound activity data, including `AVGDATA` where available | [CellMiner download page](https://discover.nci.nih.gov/cellminer/loadDownload.do) | `data/raw/cellminer/` |
-| GEO | `GSE116450_series_matrix.txt.gz` | [GSE116450 record](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116450) | `data/raw/geo/GSE116450_series_matrix.txt.gz` |
-| Ensembl | Release 115 Affymetrix HG-U133 Plus 2 to HGNC mapping | [Ensembl 115 archive](https://sep2025.archive.ensembl.org/) | `data/raw/ensembl/ensembl115_affy_hgnc.tsv` |
-| MSigDB | `c2.cp.kegg.v2023.1.Hs.symbols.gmt` | [MSigDB downloads](https://www.gsea-msigdb.org/gsea/downloads.jsp) | `data/raw/msigdb/c2.cp.kegg.v2023.1.Hs.symbols.gmt` |
-| ChEMBL | ChEMBL 35 SQLite release | [ChEMBL 35 archive](https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_35/) | `data/raw/chembl/chembl_35_sqlite/chembl_35.db` |
-| BindingDB | May 2026 all-data TSV, `BindingDB_All_202605_tsv.zip` | [BindingDB downloads](https://www.bindingdb.org/rwd/bind/chemsearch/marvin/Download.jsp) and [archived releases](https://library.ucsd.edu/dc/collection/bb03870458) | `data/raw/bindingdb/BindingDB_All_202605_tsv.zip` |
-| NCI Drug Dictionary | Individual drug records used to review incomplete mechanism annotations | [NCI dictionaries](https://www.cancer.gov/publications/dictionaries) | No bulk file required |
+| DrugComb / NCI-ALMANAC | `summary_df_ALMANAC.csv`, the project copy of the ALMANAC summary subset | [DrugComb v1.4 record](https://zenodo.org/records/11102665) and [direct public summary-table download](https://zenodo.org/records/11102665/files/summary_table_v1.4.csv?download=1) | `data/raw/drugcomb/summary_df_ALMANAC.csv` |
+| CellMiner / NCI-60 | Compound activity data, including `AVGDATA` where available | [DTP NCI-60 raw compound-activity download](https://discover.nci.nih.gov/cellminer/download/rawdataset/DTP_NCI60_RAW.zip) and [CellMiner dataset index](https://discover.nci.nih.gov/cellminer/loadDownload.do) | `data/raw/cellminer/` |
+| GEO | `GSE116450_series_matrix.txt.gz` | [Direct series-matrix download](https://ftp.ncbi.nlm.nih.gov/geo/series/GSE116nnn/GSE116450/matrix/GSE116450_series_matrix.txt.gz) and [GSE116450 record](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE116450) | `data/raw/geo/GSE116450_series_matrix.txt.gz` |
+| Ensembl | Release 115 Affymetrix HG-U133 Plus 2 to HGNC mapping | [Ensembl 115 BioMart service](https://sep2025.archive.ensembl.org/biomart/martservice) | `data/raw/ensembl/ensembl115_affy_hgnc.tsv` |
+| MSigDB | `c2.cp.kegg.v2023.1.Hs.symbols.gmt` | [Exact MSigDB 2023.1.Hs file (login required)](https://www.gsea-msigdb.org/gsea/msigdb/download_file.jsp?filePath=/msigdb/release/2023.1.Hs/c2.cp.kegg.v2023.1.Hs.symbols.gmt) | `data/raw/msigdb/c2.cp.kegg.v2023.1.Hs.symbols.gmt` |
+| ChEMBL | ChEMBL 35 SQLite release | [Direct ChEMBL 35 SQLite archive](https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_35/chembl_35_sqlite.tar.gz) and [release directory](https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_35/) | `data/raw/chembl/chembl_35_sqlite/chembl_35.db` |
+| BindingDB | May 2026 all-data TSV, `BindingDB_All_202605_tsv.zip` | The exact monthly file is no longer on the live download page; use the included harmonized table for this analysis. See [BindingDB downloads](https://www.bindingdb.org/rwd/bind/chemsearch/marvin/Download.jsp) and the [UCSD quarterly archive](https://library.ucsd.edu/dc/collection/bb03870458). | `data/raw/bindingdb/BindingDB_All_202605_tsv.zip` if already retained locally |
+| NCI Drug Dictionary | Individual drug records used to review incomplete mechanism annotations | [NCI Drug Dictionary](https://www.cancer.gov/publications/dictionaries/cancer-drug) | No bulk file required |
 | PubChem | Individual compound records used to review names, structures, and mechanisms | [PubChem](https://pubchem.ncbi.nlm.nih.gov/) | No bulk file required |
 
 ## Download steps
@@ -45,9 +45,10 @@ selecting the same ALMANAC records before running the script.
 
 ### 2. CellMiner GI50 data
 
-Open the [CellMiner download page](https://discover.nci.nih.gov/cellminer/loadDownload.do),
-select the compound-activity data for the NCI-60 panel, and save the downloaded
-files under `data/raw/cellminer/`. Match the drug records with the NSC
+Download the [DTP NCI-60 raw compound-activity archive](https://discover.nci.nih.gov/cellminer/download/rawdataset/DTP_NCI60_RAW.zip)
+and save it under `data/raw/cellminer/`. The broader
+[CellMiner dataset index](https://discover.nci.nih.gov/cellminer/loadDownload.do)
+also lists the current raw and processed NCI-60 files. Match the drug records with the NSC
 identifiers in `data/annotations/almanac_cellminer_nsc_crosswalk.csv`. Use the
 aggregate `AVGDATA` profile when available;
 otherwise, take the median of the available screening measurements for each
@@ -72,11 +73,11 @@ HGNC symbols. The pathway build then runs locally from these versioned files.
 
 ### 4. KEGG pathways from MSigDB
 
-MSigDB requires a free account. Sign in on the
-[MSigDB downloads page](https://www.gsea-msigdb.org/gsea/downloads.jsp), choose
-release 2023.1 for human gene symbols, and download
-`c2.cp.kegg.v2023.1.Hs.symbols.gmt`. Do not replace it with the current KEGG
-collection when reproducing the reported results.
+MSigDB requires a free account. Sign in and download the
+[exact 2023.1.Hs KEGG file](https://www.gsea-msigdb.org/gsea/msigdb/download_file.jsp?filePath=/msigdb/release/2023.1.Hs/c2.cp.kegg.v2023.1.Hs.symbols.gmt),
+`c2.cp.kegg.v2023.1.Hs.symbols.gmt`. The link redirects to the MSigDB login
+page when no active session is present. Do not replace this file with the
+current KEGG collection when reproducing the reported pathway input.
 
 The pathway pair costs read by the analysis are stored in
 `data/inputs/pathway_module_pair_costs.csv`.
@@ -101,8 +102,8 @@ input and is not substituted for relative inhibition in this pathway step.
 
 ### 5. ChEMBL 35
 
-Download the SQLite archive from the
-[ChEMBL 35 release directory](https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_35/),
+Download the [ChEMBL 35 SQLite archive](https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_35/chembl_35_sqlite.tar.gz)
+from the [ChEMBL 35 release directory](https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_35/),
 extract it under `data/raw/chembl/`, and confirm that the database is available
 at:
 
@@ -121,10 +122,16 @@ manual database review.
 
 ### 6. BindingDB May 2026
 
-Obtain `BindingDB_All_202605_tsv.zip` from the BindingDB download page or its
-long-term archive and place it in `data/raw/bindingdb/`. BindingDB publishes
-regular updates, so a differently dated all-data file is not an exact
-substitute for the May 2026 release.
+The binding input was assembled from the May 2026 monthly file
+`BindingDB_All_202605_tsv.zip`. BindingDB's live download page now serves newer
+monthly files, and its UCSD archive contains quarterly snapshots rather than
+this exact May file. Therefore, neither the current live download nor the
+nearest quarterly snapshot is an exact replacement. The harmonized records
+used by this repository are included in
+`data/inputs/binding_assays_raw_harmonized.tsv`. Use the
+[BindingDB download page](https://www.bindingdb.org/rwd/bind/chemsearch/marvin/Download.jsp)
+for current data or the [UCSD BindingDB archive](https://library.ucsd.edu/dc/collection/bb03870458)
+for stable quarterly releases.
 
 BindingDB and ChEMBL records were converted to a common set of drug names,
 target names, assay types, and negative-log concentration values in
