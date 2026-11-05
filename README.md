@@ -108,14 +108,9 @@ costs for each drug pair, and saves the results to
 `results/generated/pathway_rebuild/`. Intermediate gene-level tables are not
 saved.
 
-Pathway enrichment uses 10,000 permutations and may take several minutes. The
-default settings are seed 42 and one worker. Using `--workers=4` may speed up
-execution on macOS or Linux, but parallel random streams can produce slightly
-different enrichment results.
-
-The random seed used to generate the pathway file for the paper was not
-recorded. The script now uses seed 42 for reproducibility, but the resulting
-module assignments may differ from those in the original file.
+Pathway enrichment uses 10,000 permutations and may take several minutes.
+Detailed execution settings and notes about rebuilding this input are provided
+in `docs/RAW_DATA_DOWNLOADS.md`.
 
 ### Create the mechanism-redundancy input
 

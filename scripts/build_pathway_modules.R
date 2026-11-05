@@ -1,9 +1,9 @@
 #!/usr/bin/env Rscript
 
-# Build cancer-specific pathway-module costs from the source files. Seed 42
-# fixes the random sequence for new runs. The original enrichment run did not
-# save its random-number state, so a new run can differ from the pathway input
-# used for the paper. Only pair costs and module assignments are written to disk;
+# Build cancer-specific pathway-module costs from the source files. The fixed
+# seed makes new runs repeatable. Permutation results near the significance
+# threshold can differ from an earlier build whose random-number state was not
+# retained. Only pair costs and module assignments are written to disk;
 # gene-level and enrichment tables stay in memory.
 
 required_packages <- c(
