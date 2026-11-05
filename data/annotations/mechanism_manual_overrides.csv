@@ -1,0 +1,12 @@
+almanac_drug,canonical_drug,primary_targets,action_type,mechanism_class,annotation_source
+"Azacytidine, 5-",Azacitidine,DNA methyltransferase,INHIBITOR,DNA methyltransferase inhibitor; Nucleoside antimetabolite,https://www.cancer.gov/publications/dictionaries/cancer-drug/def/azacitidine
+Eloxatin (TN) (Sanofi Synthelab),Oxaliplatin,DNA,CROSSLINKER,Platinum DNA crosslinker; Alkylating-like agent,https://www.cancer.gov/publications/dictionaries/cancer-drug/def/oxaliplatin
+Emcyt (Pharmacia),Estramustine,Tubulin; Microtubule-associated proteins,INHIBITOR,Microtubule inhibitor; Antimitotic agent,https://www.cancer.gov/publications/dictionaries/cancer-drug/def/estramustine-phosphate-sodium
+Fludarabine Base,Fludarabine,DNA polymerase alpha; Ribonucleotide reductase; DNA primase,INHIBITOR,Purine nucleoside antimetabolite; DNA synthesis inhibitor,https://www.cancer.gov/publications/dictionaries/cancer-drug/def/fludarabine-phosphate
+Quinacrine hydrochloride,Quinacrine,DNA,INTERCALATOR,DNA intercalator,https://pubchem.ncbi.nlm.nih.gov/compound/Quinacrine
+Triethylenemelamine,Triethylenemelamine,DNA,ALKYLATING AGENT,Aziridine alkylating agent; DNA crosslinker,https://pubchem.ncbi.nlm.nih.gov/compound/Tretamine
+Trisenox,Arsenic trioxide,PML-RARA fusion protein,DEGRADER,PML-RARA fusion-protein degrader; Differentiation-inducing agent,https://www.cancer.gov/publications/dictionaries/cancer-drug/def/arsenic-trioxide
+Zanosar,Streptozocin,DNA,ALKYLATING AGENT,Nitrosourea alkylating agent; DNA crosslinker,https://www.cancer.gov/publications/dictionaries/cancer-drug/def/streptozocin
+actinomycin D,Dactinomycin,DNA; RNA polymerase,INTERCALATOR; INHIBITOR,DNA intercalator; Transcription inhibitor,https://events.cancer.gov/sites/default/files/assets/dccps/dccps-nccrsummit/11_Jeremy_2021%20-%20%202%20-%20NCCR%20-%20HemOnc%20vocabulary.pdf
+cis-Platin,Cisplatin,DNA,CROSSLINKER,Platinum DNA crosslinker; Alkylating-like agent,https://www.cancer.gov/publications/dictionaries/cancer-drug/def/cisplatin
+dacarbazine,Dacarbazine,DNA,ALKYLATING AGENT,Triazene alkylating agent; DNA crosslinker,https://www.cancer.gov/publications/dictionaries/cancer-drug/def/dacarbazine

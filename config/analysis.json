@@ -1,0 +1,23 @@
+{
+  "primary_inputs": [
+    "gi50_percentile_cost",
+    "pathway_percentile_cost",
+    "mechanism_percentile_cost"
+  ],
+  "primary_input_weight": 0.3333333333333333,
+  "binding_input_weight": 0.25,
+  "positive_percentile": 0.99,
+  "ml_folds": 5,
+  "ml_seed": 20261029,
+  "random_forest_trees": 500,
+  "neural_hidden_layers": [64, 32, 16],
+  "sqa_repeats": 10,
+  "sqa_reads_per_repeat": 500,
+  "sqa_sweeps": 1000,
+  "sqa_trotter": 8,
+  "sqa_beta": 5.0,
+  "sqa_gamma": 1.0,
+  "sqa_cardinality_penalty": 2.0,
+  "sqa_forbidden_pair_energy": 10.0,
+  "sqa_seed": 20261030
+}
