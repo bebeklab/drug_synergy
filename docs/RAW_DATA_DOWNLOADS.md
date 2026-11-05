@@ -92,10 +92,10 @@ Rscript scripts/build_pathway_modules.R
 ```
 
 The script uses seed 42 and one worker by default so new runs are reproducible.
-Because pathway enrichment is permutation-based, rebuilt results may differ
-slightly, especially for pathways near the significance cutoff or when using
-multiple workers. The included `data/inputs/pathway_module_pair_costs.csv` is
-the pathway input used for the reported analysis.
+The seed used for the earlier pathway build was not retained, so rebuilding
+the pathway input may produce slightly different results. The included
+`data/inputs/pathway_module_pair_costs.csv` is the pathway input used for the
+reported analysis.
 
 The pathway workflow uses ALMANAC single-drug relative-inhibition values to
 define sensitive and resistant cell lines. CellMiner GI50 is a separate QUBO
