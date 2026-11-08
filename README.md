@@ -17,14 +17,14 @@ config/             Seeds, thresholds, and model settings
 data/inputs/        Tables read by the analysis scripts
 data/annotations/   Reviewed drug names, targets, and mechanisms
 docs/               Data sources and analysis map
-results/generated/  New results created on your computer
 scripts/            Analysis steps in execution order
 src/drug_synergy/   Shared loading, scoring, and metric functions
 tests/              Checks for the central calculations
 ```
 
 Run the analysis through `scripts/`. Shared loading, scoring, and evaluation
-functions are in `src/`.
+functions are in `src/`. The scripts create `results/generated/` locally when
+needed. That output directory is not stored in GitHub.
 
 ## Install
 
@@ -44,7 +44,8 @@ they are not raw database downloads. Several are created by the preparation
 scripts described below:
 
 ```text
-source data -> preparation scripts -> data/inputs -> main analysis -> results
+included data/inputs -> main analysis -> local outputs
+source data -> preparation scripts -> rebuilt tables for inspection
 ```
 
 Prepared copies are included so the main analysis runs without downloading
@@ -54,7 +55,9 @@ analysis** below.
 
 The following sections explain how the consensus, pathway, mechanism, and
 binding tables were created. Run them if you want to inspect those preparation
-steps or create new copies from the source data.
+steps or create new copies from the source data. Rebuilt tables are written
+under `results/generated/` for inspection and do not overwrite the included
+files in `data/inputs/`.
 
 ### Create the consensus-synergy outcomes
 
@@ -157,7 +160,8 @@ python scripts/run_analysis.py
 
 This command reads the prepared input tables and runs the three-input QUBO,
 early-retrieval and ablation analyses, five-fold supervised comparisons, and
-the binding sensitivity analysis. New output goes to `results/generated/`.
+the binding sensitivity analysis. It creates `results/generated/` and its
+subdirectories automatically.
 
 To run the analysis steps separately:
 
